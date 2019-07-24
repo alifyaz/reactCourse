@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Candal';
+    background-color: #f0f4f3;
+    background-image: linear-gradient(-90deg, #ddd, #fff);
+}
+
+.root {
+    border-radius: 10px;
+    width: 60%;
+    height: 500px;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 35px 30px #d3d3d3;
+}
+
+p {
+    font-family: 'thasadith';
+    font-size: 17px;
+}
+
+
+/***************************  detailed side start ***********************************/
+#detailed-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 35%;
+    height: 100%;
+    background-color: white;
+    width: 65%;
+}
+
+/* header with text "Sign In" */
+#detailed-box h1 {
+    font-size: 2.5em;
+    color: #3ab397;
+}
+
+/* form */
+#detailed-box form {
+    margin-top: 50px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* form  2 labels - each one contains a text-input and an icon */
+#detailed-box label {
+    position: relative;
+    margin: 5px;
+    width: 100%;
+}
+
+/* Icons of text-inputs inside form */
+#detailed-box label i {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 15px;
+    color: #b5b5b5;
+    font-size: 16px;
+}
+
+/* text-inputs inside form */
+#detailed-box label input {
+    width: 100%;
+    height: 40px;
+    padding: 5px 40px;
+    border: none;
+    border-bottom-color: white; /*in focus transition, makes border better*/
+    font-family: 'Thasadith';
+    letter-spacing: 2px;
+    color: #6f6f6f;
+    background-color: #f1f1f1;
+    outline-width: 0;
+    transition: 0.5s;
+}
+
+#detailed-box label input:focus {
+    outline: none;
+    border-bottom: 1px solid #4eafb7;
+}
+
+#detailed-box label input::placeholder {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+/* link with value "Forgot Password?" */
+#detailed-box a {
+    align-self: flex-start;
+    padding-left: 20px;
+    text-decoration: none;
+    color: #3ab397;
+}
+
+#detailed-box label input:focus::placeholder {
+    opacity: 0;
+}
+
+/* submit button with value of "sign in" */
+#detailed-box form > input {
+    width: 70%;
+    margin-top: 30px;
+    border: none;
+    border-radius: 40px;
+    background-color: #3ab397;
+    padding: 14px;
+    color: white;
+    font-family: 'Syncopate';
+    font-size: 14;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+#detailed-box form > input:hover {
+    width: 90%;
+    cursor: pointer;
+}
+
+#detailed-box form > input:active {
+    opacity: 0.5;
+    transition: 0s;
+}
+
+#detailed-box form > input:focus {
+    outline: none;
+}
+/***************************  detailed side end ***********************************/
+
+
+/***************************  offer side start ***********************************/
+/* container */
+#offer-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    right: 65%;
+    width: 35%;
+    height: 100%;
+    color: white;
+    background-color: #3ab397;
+    transition: 0.5s cubic-bezier(0.68, 0.24, 0, 1.47), color 0s;
+    float: left;
+}
+
+/* header inside offer-box */
+#offer-box h1 {
+    text-align: center;
+}
+
+/* text inside offer-box */
+#offer-box p {
+    text-align: center;
+    padding: 10px;
+}
+
+/* button inside offer-box consists of a div and a link */
+#offer-login-btn {
+    width: 70%;
+    margin-top: 20px;
+    border: 1px solid white;
+    border-radius: 40px;
+    background-color: #3ab397;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+#offer-login-btn:hover {
+    background-color: white;
+    width: 90%;
+}
+
+
+#offer-login-btn:active {
+    opacity: 0.5;
+    transition: 0s;
+}
+
+/* the link of button */
+#offer-login-btn a {
+    display: block;
+    padding: 14px;
+    color: white;
+    font-family: 'Syncopate';
+    font-size: 14;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.5s;
+}
+
+#offer-login-btn a:hover {
+    color: #3ab397;
+}
+
+/*
+#offer-box:hover {
+    color: white;
+    background-color: #3ab397;
+    right: 65%;
+}*/
+/***************************  offer side end ***********************************/
